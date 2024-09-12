@@ -2,7 +2,7 @@ services:
   ecourse:
     container_name: ecourse
     build: .
-    restart: always
+    restart: unless-stopped
     ports:
       - "8090:8090"
     volumes:
