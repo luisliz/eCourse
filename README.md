@@ -44,7 +44,13 @@ cd pb
 ./pocketbase serve
 ```
 
-4. Start the Vite server
+4. Create `.env` file
+
+```bash
+cp .env.example .env
+```
+
+5. Start the Vite server
 
 ```bash
 cd ui
