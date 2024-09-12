@@ -1,0 +1,12 @@
+services:
+  ecourse:
+    container_name: ecourse
+    build: .
+    restart: always
+    ports:
+      - "8090:8090"
+    volumes:
+      - ecourse:/app/pb/pb_data
+volumes:
+  ecourse:
+
