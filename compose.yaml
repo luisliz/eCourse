@@ -9,4 +9,3 @@ services:
       - ecourse:/app/pb/pb_data
 volumes:
   ecourse:
-
