@@ -44,16 +44,21 @@ cd pb
 ./pocketbase serve
 ```
 
-4. Create `.env` file
+4. Change to `ui` dir
+
+```bash
+cd ../ui
+```
+
+5. Create `.env` file
 
 ```bash
 cp .env.example .env
 ```
 
-5. Start the Vite server
+6. Start the Vite server
 
 ```bash
-cd ui
 npm install && npm run dev
 ```
 
