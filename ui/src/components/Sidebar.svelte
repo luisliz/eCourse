@@ -26,6 +26,14 @@
     pb.authStore.clear();
     navigate("/login");
   }
+  async function handleScan() {
+    try {
+      await triggerScan();
+      showAlert($t("coursesScannedSuccess"), "success");
+    } catch (error) {
+      showAlert($t("courseScanError"), "fail");
+    }
+  }
 </script>
 
 {#if $isSidebarVisible}
@@ -77,6 +85,13 @@
     >
       <Icon class="flex-shrink-0 text-base" icon="ph:magnifying-glass" />
       {$t("search")}
+    </button>
+    <button
+      on:click={handleScan}
+      class="flex items-center gap-2 rounded-md border-[1.5px] border-white/10 bg-transparent p-2 text-white/50 outline-none transition hover:border-transparent hover:bg-white/10"
+      title={$t("scanCourses")}
+    >
+      <Icon class="flex-shrink-0 text-base" icon="ph:sync" />
     </button>
 
     <div class="hide-scrollbar flex flex-grow flex-col gap-5 overflow-y-scroll">
